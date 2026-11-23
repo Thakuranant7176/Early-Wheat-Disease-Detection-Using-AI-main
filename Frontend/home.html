@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Khet Rakshak Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="header">
+<div class="menu">☰</div>
+
+<div class="brand">
+<img src="logo.jpeg">
+<div>
+<h1>Khet Rakshak</h1>
+<p>Protecting Crops, Securing Future</p>
+</div>
+</div>
+
+<img src="profile.jpg" class="profile">
+</div>
+
+<div class="hero">
+<h2>Hello Farmer 👋</h2>
+<p>Let's protect your crops and maximize yield.</p>
+
+<div class="weather">
+<div>☀️<br><b>28°C</b><br>Temp</div>
+<div>💧<br><b>65%</b><br>Humidity</div>
+<div>💨<br><b>12 km/h</b><br>Wind</div>
+</div>
+</div>
+
+<h2 class="section-title">Features</h2>
+
+<div class="features">
+
+<div class="card">
+<span style="font-size:40px;">🦠</span>
+<h3>Disease Detection</h3>
+<p>Scan Wheat Diseases</p>
+
+<br>
+
+<input type="file" id="wheatImageInput" accept="image/*"
+style="width:100%;padding:8px;margin-bottom:10px;border:1px dashed #087236;border-radius:5px;">
+<img id="imagePreview"
+     src=""
+     alt="Preview"
+     style="display:none;width:100%;margin-top:15px;border-radius:12px;">
+
+<button onclick="predictWheatDisease()"
+style="background:#087236;color:white;border:none;width:100%;padding:12px;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;">
+🔍 Check Disease
+</button>
+
+<div id="predictionResult"
+style="display:none;margin-top:15px;padding:12px;background:white;border-radius:10px;text-align:left;border-left:5px solid #087236;">
+
+<h4 style="color:#0b5c32;">Disease Report:</h4>
+<p><strong>Disease:</strong> <span id="resDisease" style="color:#d32f2f;font-weight:bold;"></span></p>
+<p><strong>Confidence:</strong> <span id="resConfidence" style="font-weight:bold;"></span></p>
+<p><strong>Remedy:</strong> <span id="resRemedy"></span></p>
+
+</div>
+</div>
+
+<div class="card">
+<button class="icon-btn" onclick="openPage('Weather Alert','🌦️','Check weather alerts.')">
+<span>🌦️</span>
+<h3>Weather Alert</h3>
+<p>Live Forecast</p>
+</button>
+</div>
+
+<div class="card">
+<button class="icon-btn" onclick="openPage('Market Price','🛒','View live mandi rates.')">
+<span>🛒</span>
+<h3>Market Price</h3>
+<p>Live Mandi Rates</p>
+</button>
+</div>
+
+<div class="card">
+<button class="icon-btn" onclick="openPage('Expert Help','🎧','Contact agriculture experts.')">
+<span>🎧</span>
+<h3>Expert Help</h3>
+<p>Talk To Experts</p>
+</button>
+</div>
+
+<div class="card">
+<button class="icon-btn" onclick="openPage('Crop Guide','🌾','Learn crop management.')">
+<span>🌾</span>
+<h3>Crop Guide</h3>
+<p>Crop Management</p>
+</button>
+</div>
+
+<div class="card">
+<button class="icon-btn" onclick="openPage('Fertilizer Guide','🧪','Get fertilizer suggestions.')">
+<span>🧪</span>
+<h3>Fertilizer Guide</h3>
+<p>Best Suggestions</p>
+</button>
+</div>
+
+</div>
+
+<div class="status">
+<div>
+<h3>My Crop Status</h3>
+<p>Monitor Crop Health</p>
+</div>
+<button onclick="openPage('My Crop Status','🌱','View crops.')">View</button>
+</div>
+
+<h2 class="section-title">Quick Actions</h2>
+
+<div class="quick">
+<button onclick="openPage('Camera Scan','📷','Open camera scan.')">📷<br>Camera Scan</button>
+<button onclick="openPage('Gallery Scan','🖼️','Upload image.')">🖼️<br>Gallery Scan</button>
+<button onclick="openPage('Voice Assistant','🎤','Voice assistant.')">🎤<br>Voice Assistant</button>
+<button onclick="openPage('Nearby Stores','🏪','Nearby stores.')">🏪<br>Nearby Stores</button>
+</div>
+
+<div class="nav">
+<button onclick="window.location.href='home.html'">🏠<br>Home</button>
+<button onclick="openPage('Crops','🌱','Crop history.')">🌱<br>Crops</button>
+<button class="scan" onclick="openPage('Scan Crop','⌖','Start scanning.')">⌖</button>
+<button onclick="openPage('Alerts','🔔','Alerts.')">🔔<br>Alerts</button>
+<button onclick="openPage('Profile','👤','Profile settings.')">👤<br>Profile</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Healthy 
+Wheat Blast
+Loose Smut
+Yellow Rust
+Brown Rust
+Leaf Blight
+Wheat Not Detected, Try Again 
